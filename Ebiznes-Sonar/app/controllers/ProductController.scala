@@ -13,7 +13,6 @@ class ProductController @Inject()(val controllerComponents: ControllerComponents
   productsList += Product(2, "klawiatura", "gamingowa", 150.21)
 
   implicit val productsListJson: OFormat[Product] = Json.format[Product]
-  val n = null;
 
   def getAllProducts(): Action[AnyContent] = Action {
     if(productsList.isEmpty){
