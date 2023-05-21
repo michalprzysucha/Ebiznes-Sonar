@@ -8,11 +8,12 @@ import models.Product
 
 @Singleton
 class ProductController @Inject()(val controllerComponents: ControllerComponents) extends BaseController {
-//  private val productsList = new ListBuffer[Product]()
+  private val productsList = new ListBuffer[Product]()
   productsList += Product(1, "monitor", "monitor 4k", 1500.50)
   productsList += Product(2, "klawiatura", "gamingowa", 150.21)
 
   implicit val productsListJson: OFormat[Product] = Json.format[Product]
+  val n = null;
 
   def getAllProducts(): Action[AnyContent] = Action {
     if(productsList.isEmpty){
