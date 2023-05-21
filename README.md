@@ -1,1 +1,1 @@
-# Ebiznes-Sonar
+# Ebiznes zadanie 7.
